@@ -26,6 +26,7 @@ class Handler implements URLHandler {
                             result = result +s; 
                         }
                     }
+                    return(String.format(result));
                 }
             }
             return "404 Not Found!";
