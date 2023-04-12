@@ -10,9 +10,6 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
             return String.format(string.toString());
-        } else if (url.getPath().equals("/add")) {
-            num += 1;
-            return String.format("Number incremented!");
         } else {
             System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add")) {
@@ -25,7 +22,7 @@ class Handler implements URLHandler {
                     String result = "";
                     for(String s: string)
                     {
-                        if (s.equals(parameters[1])){
+                        if (s.contains(parameters[1])){
                             result = result +s; 
                         }
                     }
