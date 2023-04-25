@@ -23,7 +23,7 @@ class Handler implements URLHandler {
                     for(String s: string)
                     {
                         if (s.contains(parameters[1])){
-                            result = result + ", "+s; 
+                            result = result + "/n" +s; 
                         }
                     }
                     return(String.format(result));
